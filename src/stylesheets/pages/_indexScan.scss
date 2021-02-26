@@ -1,0 +1,49 @@
+.scanEmpty {
+  @include mobile;
+  background-color: $color-initial;
+  &__headerHome {
+    height: 56px;
+    width: 100vw;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: $color-ligthShadow;
+
+    &--logo {
+      @include headerLogo;
+    }
+  }
+  &__mainHome {
+    padding-top: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &--title {
+      @include title;
+      color: $color-dark;
+    }
+    &--paragraph {
+      @include paragraph;
+      color: $color-dark;
+      width: 314px;
+    }
+    &--cardContainer {
+      width: 260px;
+      margin-top: 27px;
+    }
+    &--cardBg {
+      @include imageIDCardTemplate;
+      padding: 16px 25px 16px 18px;
+    }
+    &--cardSVG {
+      height: 124px;
+      width: 217px;
+    }
+    &--btnPrimary {
+      @include buttonDefault;
+      position: absolute;
+      top: 275px;
+      text-decoration: none;
+    }
+  }
+}

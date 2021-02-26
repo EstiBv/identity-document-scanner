@@ -1,0 +1,67 @@
+.scanRejected {
+  @include mobile;
+  background-color: $color-initial;
+  &__headerHome {
+    height: 56px;
+    width: 100vw;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: $color-ligthShadow;
+
+    &--logo {
+      @include headerLogo;
+    }
+  }
+  &__mainHome {
+    padding-top: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &--title {
+      @include title;
+      color: $color-dark;
+    }
+    &--paragraph {
+      @include paragraph;
+      color: $color-dark;
+      width: 314px;
+    }
+    &--cardContainer {
+      width: 260px;
+      margin-top: 27px;
+      cursor: pointer;
+    }
+    &--cardBg {
+      @include imageIDCardTemplate;
+      height: 175px;
+      background-image: url("../../assets/scan/id-card.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      border-style: solid;
+      border-radius: 12px;
+      border-width: 2px;
+      border-color: $color-danger;
+    }
+    &--cardSVG {
+      height: 124px;
+      width: 217px;
+    }
+    &--btnPrimary {
+      @include buttonDefault;
+      position: absolute;
+      top: 275px;
+      text-decoration: none;
+    }
+    &--msgScan {
+      @include msgScan;
+      padding: 9px 8px 9px 30px;
+      background-color: $color-danger;
+      background-image: url("../../assets/scan/fontawesome-solid.svg");
+      background-position: left;
+      background-repeat: no-repeat;
+      background-size: 30px;
+    }
+  }
+}

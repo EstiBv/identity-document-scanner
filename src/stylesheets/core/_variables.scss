@@ -1,0 +1,29 @@
+// SCAN
+// colors
+$color-initial: #ffffff;
+
+$color-light: #f3f2f4;
+$color-medium: #2f0079;
+$color-dark: #000000;
+
+$color-darkShadow: rgba(0, 0, 0, 0.15);
+$color-mediumShadow: rgba(47, 0, 122, 0.302);
+$color-ligthShadow: rgba(47, 0, 121, 0.1);
+
+// Rejected
+$color-danger: #c00000;
+// Accepted
+$color-success: #69cc8b;
+
+// CAMERA
+// colors
+$color-mediumSecond: rgba(20, 28, 38, 0.75);
+$color-lightSecond: #fab72d;
+
+// Fonts
+$font-Family: "Roboto";
+$font-boldStyle: bold;
+$font-italicStyle: Italic;
+
+// Breakpoints
+$mobile-min: 375px;

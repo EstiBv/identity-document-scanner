@@ -1,0 +1,91 @@
+// SCANNER
+@mixin headerLogo {
+  color: $color-medium;
+  font-size: 21px;
+  line-height: 24px;
+  text-align: left;
+  font-style: $font-italicStyle;
+  font-weight: $font-boldStyle;
+  font-family: $font-Family;
+  text-align: left;
+  padding: 18px 0px 0px 20px;
+}
+@mixin title {
+  font-family: $font-Family;
+  font-size: 21px;
+  line-height: 24px;
+  text-align: center;
+  font-weight: $font-boldStyle;
+  padding: 0px 47px 0px 46px;
+  margin: 0px 17px 15px 16px;
+}
+@mixin paragraph {
+  font-family: $font-Family;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+}
+@mixin buttonTakeAPicture {
+  background-color: $color-medium;
+}
+
+@mixin imageIDCardTemplate {
+  box-shadow: 0px 10px 20px -6px $color-darkShadow;
+  border-radius: 12px;
+  background-color: $color-initial;
+}
+
+@mixin buttonDefault {
+  border-radius: 24px;
+  border-style: none;
+  background-color: $color-medium;
+  box-shadow: 0px 10px 20px -5px $color-mediumShadow;
+  color: $color-initial;
+  padding: 12px 20px 12px 20px;
+  font-family: $font-Family;
+  font-size: 16px;
+  font-weight: $font-boldStyle;
+  line-height: 24px;
+  text-transform: uppercase;
+  text-align: left;
+  letter-spacing: 0.35px;
+  cursor: pointer;
+}
+@mixin msgScan {
+  height: 30px;
+  color: $color-initial;
+  font-family: $font-Family;
+  font-weight: $font-boldStyle;
+  font-size: 12px;
+  text-transform: uppercase;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: relative;
+  border-radius: 4px;
+  line-height: 11px;
+  text-align: right;
+  letter-spacing: 0.75px;
+  left: 140px;
+  bottom: 17px;
+}
+
+// CAMERA
+@mixin cameraBGImage {
+  background-image: url("../../assets/camera/bg1.png");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+@mixin msgPicture {
+  font-family: $font-Family;
+  color: $color-initial;
+  text-align: left;
+  font-size: 16px;
+  line-height: 16px;
+}
+// MEDIAQUERIES
+@mixin mobile {
+  @media all and (min-width: $mobile-min) {
+    @content;
+  }
+}

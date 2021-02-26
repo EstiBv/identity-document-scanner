@@ -1,0 +1,110 @@
+canvas {
+  position: fixed;
+  box-shadow: 0px 10px 20px -6px $color-darkShadow;
+  border-radius: 12px;
+}
+.Camera {
+  @include mobile;
+  @include cameraBGImage;
+  background-size: cover;
+  height: 100vh;
+  overflow: hidden;
+
+  &__main {
+    -webkit-backdrop-filter: blur(6px);
+    backdrop-filter: blur(6px);
+    background-color: $color-mediumSecond;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &--title {
+      @include title;
+      color: $color-initial;
+      margin: 100px 47px 16px 47px;
+    }
+    &--paragraph {
+      @include paragraph;
+      color: $color-initial;
+      width: 282px;
+    }
+    &--cardContainer {
+      @include imageIDCardTemplate;
+      background-color: $color-light;
+      -o-object-fit: cover;
+      object-fit: cover;
+      width: 285px;
+      margin: 63px 0px 16px 0px;
+      cursor: pointer;
+      height: 175px;
+      display: flex;
+      flex-direction: row;
+    }
+    &--cardContainer:hover {
+      box-shadow: 0px 2px 100px -40px $color-light;
+      transition: box-shadow 0.4s ease-in-out;
+    }
+    &--msgContainer {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+    }
+    &--msgIcon {
+      width: 30px;
+      height: 30px;
+      background-image: url("../../assets/camera/fontawesome-regular.svg");
+      background-position: left;
+      background-repeat: no-repeat;
+    }
+    &--msgPicture {
+      @include msgPicture;
+      width: 120px;
+      color: $color-initial;
+      text-align: center;
+    }
+    &--btnCancel {
+      position: absolute;
+      bottom: 48px;
+      @include paragraph;
+      letter-spacing: 0.35px;
+      font-weight: $font-boldStyle;
+      text-transform: uppercase;
+      color: $color-initial;
+      text-decoration: none;
+    }
+    &--loading {
+      align-items: center;
+    }
+    &--loading:after {
+      content: " ";
+      display: block;
+      width: 30px;
+      height: 30px;
+      margin: 23px;
+      border-radius: 50%;
+      border: 2px solid $color-initial;
+      border-color: $color-initial transparent $color-initial transparent;
+      -webkit-animation: loading 1.2s linear infinite;
+      animation: loading 1.2s linear infinite;
+    }
+    @-webkit-keyframes loading {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+    @keyframes loading {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  }
+}

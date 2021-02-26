@@ -1,0 +1,76 @@
+.Camera {
+  @include mobile;
+  @include cameraBGImage;
+  background-size: cover;
+  height: 100vh;
+
+  &__mainError {
+    -webkit-backdrop-filter: blur(6px);
+    backdrop-filter: blur(6px);
+    background-color: $color-mediumSecond;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &--title {
+      @include title;
+      color: $color-initial;
+      margin: 100px 47px 16px 47px;
+    }
+    &--paragraph {
+      @include paragraph;
+      color: $color-initial;
+      width: 282px;
+    }
+    &--cardContainer {
+      @include imageIDCardTemplate;
+      padding: 16px 25px 16px 18px;
+      @include cameraBGImage;
+      width: 285px;
+      margin: 63px 0px 16px 0px;
+      cursor: pointer;
+      height: 175px;
+      border-style: solid;
+      border-width: 2px;
+      border-color: $color-danger;
+    }
+    &--cardContainerBg {
+      transform: rotate(1deg);
+      box-shadow: 0 2px 4px 0 hsla(0, 0%, 0%, 0.5);
+      position: relative;
+      bottom: 10px;
+      right: 7px;
+    }
+    &--msgContainer {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+    }
+    &--msgIcon {
+      width: 30px;
+      height: 30px;
+      background-image: url("../../assets/camera/fontawesome-regular.svg");
+      background-position: left;
+      background-repeat: no-repeat;
+    }
+    &--msgPicture {
+      @include msgPicture;
+      width: 98px;
+      color: $color-initial;
+      text-align: center;
+    }
+    &--btnCancel {
+      position: absolute;
+      bottom: 48px;
+      @include paragraph;
+      letter-spacing: 0.35px;
+      font-weight: $font-boldStyle;
+      text-transform: uppercase;
+      color: $color-initial;
+      text-decoration: none;
+    }
+  }
+}

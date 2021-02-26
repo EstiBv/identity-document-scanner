@@ -1,0 +1,9 @@
+@import "core/variables";
+@import "core/mixins";
+@import "../index.scss";
+@import "pages/indexScan";
+@import "pages/scanRejected";
+@import "pages/scanAccepted";
+@import "pages/camera";
+@import "pages/cameraError";
+@import "pages/cameraTaken";
