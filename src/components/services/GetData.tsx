@@ -6,6 +6,6 @@ const getDataApi = () => {
     .then((data) => {
       return data.summary;
     })
-    .catch((error) => console.log("Ha sucedido un error"));
+    .catch((error) => console.log("Ha sucedido un error en la petición"));
 };
 export default getDataApi;
